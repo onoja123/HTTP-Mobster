@@ -3,11 +3,12 @@ import { newRequest, getAllRequests, getOneRequest } from '../controllers/reques
 
 const router: Router = express.Router();
 
-// Route to log a new request
-router.post('/log', newRequest);
 
 // Route to get all logged requests
 router.get('/', getAllRequests);
+
+// Route to log a new request
+router.post('/log', newRequest);
 
 // Route to get one request by ID
 router.get('/:requestId', getOneRequest);
